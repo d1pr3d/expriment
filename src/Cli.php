@@ -9,6 +9,9 @@ use Vacancy\Datasource\StaticDatasource;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
+/**
+ * @codeCoverageIgnore
+ */
 class Cli extends Command
 {
     /**
