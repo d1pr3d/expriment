@@ -38,6 +38,6 @@ class VacancyRepository
             $vacancies = array_merge($vacancies, $dataSource->fetch());
         }
 
-        return array();
+        return $vacancies;
     }
 }

@@ -59,7 +59,7 @@ class VacancyRepositoryTest extends PHPUnit_Framework_TestCase
 
         return array(
             array( array($datasourceMock1->reveal()), 1), // one data source, one vacancy
-            array( array($datasourceMock1->reveal()), 2), // another data source, two vacancies,
+            array( array($datasourceMock2->reveal()), 2), // another data source, two vacancies,
             array( array($datasourceMock1->reveal(), $datasourceMock2->reveal()), 3), // both data sources, three vacancies,
         );
     }
