@@ -9,11 +9,13 @@ class VacancyRepositoryTest extends PHPUnit_Framework_TestCase
      */
     private $prophet;
 
-    public function setup() {
+    public function setup()
+    {
         $this->prophet = new \Prophecy\Prophet();
     }
 
-    public function test_it_registers_new_data_source() {
+    public function test_it_registers_new_data_source()
+    {
         $repository = new VacancyRepository();
 
         $datasourceMock1 = $this->prophet->prophesize('Vacancy\Repository\DatasourceInterface');
@@ -28,7 +30,8 @@ class VacancyRepositoryTest extends PHPUnit_Framework_TestCase
     /**
      * @dataProvider datasourcesProvider
      */
-    public function test_it_fetches_vacancies($dataSources, $amountOfExpectedVacancies) {
+    public function test_it_fetches_vacancies($dataSources, $amountOfExpectedVacancies)
+    {
         $repository = new VacancyRepository();
 
         foreach ($dataSources as $dataSource) {
@@ -42,7 +45,8 @@ class VacancyRepositoryTest extends PHPUnit_Framework_TestCase
     /**
      * @return array
      */
-    public function dataSourcesProvider() {
+    public function dataSourcesProvider()
+    {
         $prophet = new \Prophecy\Prophet();
         $vacancyMock = $prophet->prophesize('Vacancy\Repository\VacancyInterface');
 
@@ -59,8 +63,9 @@ class VacancyRepositoryTest extends PHPUnit_Framework_TestCase
 
         return array(
             array( array($datasourceMock1->reveal()), 1), // one data source, one vacancy
-            array( array($datasourceMock2->reveal()), 2), // another data source, two vacancies,
-            array( array($datasourceMock1->reveal(), $datasourceMock2->reveal()), 3), // both data sources, three vacancies,
+            array( array($datasourceMock2->reveal()), 2), // another data source, two vacancies
+            array( array($datasourceMock1->reveal(), $datasourceMock2->reveal()), 3), // both data sources, three vacancies
         );
     }
 }
+

@@ -12,7 +12,8 @@ class VacancyRepository
      * @param DatasourceInterface $dataSource
      * @return $this
      */
-    public function registerDatasource(DatasourceInterface $dataSource) {
+    public function registerDatasource(DatasourceInterface $dataSource)
+    {
         $this->dataSources[] = $dataSource;
 
         return $this;
@@ -21,14 +22,16 @@ class VacancyRepository
     /**
      * @return array of DatasourceInterface
      */
-    public function getDatasources() {
+    public function getDatasources()
+    {
         return $this->dataSources;
     }
 
     /**
      * @return array of VacancyInterface
      */
-    public function getVacancies() {
+    public function getVacancies()
+    {
         $vacancies = array();
 
         /**
