@@ -8,6 +8,6 @@
     "squizlabs/php_codesniffer": "2.*"
   },
   "autoload": {
-    "psr-4": {"Vacancies\\": "src/"}
+    "psr-4": {"Vacancy\\": "src/"}
   }
 }
