@@ -48,4 +48,3 @@ class Cli extends Command
         }
     }
 }
-

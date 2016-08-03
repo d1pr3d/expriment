@@ -2,9 +2,6 @@
 
 namespace Vacancy\Repository;
 
-
-use Vacancy\Repository\VacancyInterface;
-
 class Vacancy implements VacancyInterface
 {
     /**
@@ -90,6 +87,4 @@ class Vacancy implements VacancyInterface
     {
         return $this->description;
     }
-
-
 }
