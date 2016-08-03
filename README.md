@@ -33,4 +33,5 @@ $ ./vendor/bin/phpcs --standard=PSR2 src
 Example command:
 
 ```
-$ php run.php ```
+$ php run.php 
+```
